@@ -17,28 +17,19 @@ type Man struct {
 	Person
 }
 
-func (m *Man) myGender() string {
-	return m.gender
-}
-
-func (m *Man) changeGender(){
-	m.gender = "female"
-}
-
 type Woman struct {
 	Person
 }
 
-func (w *Woman) myGender() string {
-	return w.gender
+func (p *Person) myGender() string {
+	return p.gender
 }
 
-func (w *Woman) changeGender() {
-	w.gender = "male"
-}
-
-func (p *Person) myPointerType() string {
-	return "human"
+func (p *Person) changeGender(){
+	if p.gender == "male" { 
+		p.gender = "female"} else
+	if p.gender == "female" {
+		p.gender = "male"}	
 }
 
 func PrintGender(h Human){
