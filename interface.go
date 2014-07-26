@@ -36,7 +36,7 @@ func PrintGender(h Human){
 	println(h.myGender())
 }
 
-func changeGender(h Human) {
+func alterGender(h Human) {
 	h.changeGender()
 }
 
@@ -49,7 +49,7 @@ func main() {
 	human_Arr := [...]Human{m,w}
 	for n, _ := range (human_Arr)	{
 		PrintGender(human_Arr[n])
-		changeGender(human_Arr[n])
+		alterGender(human_Arr[n])
 		PrintGender(human_Arr[n])
 		//println(human_Arr[n].gender)
 	}
